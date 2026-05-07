@@ -1,6 +1,9 @@
 # OctoCAT Supply Chain Management - Makefile
 # Supports both template (api-nodejs, api-python) and promoted (api) folder structures within actually rendered repositories for easier startup.
 
+# Use Git Bash on Windows so shell commands ([ -d ... ], trap, etc.) work correctly
+SHELL := C:/Program Files/Git/bin/bash.exe
+
 # Allow overriding backend via environment variable (e.g., BACKEND=python make dev)
 BACKEND ?= $(shell \
 	if [ -d "api" ]; then \
